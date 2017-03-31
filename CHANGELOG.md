@@ -22,6 +22,10 @@
   requests. The added functionality is described in
   [#2211](https://github.com/Mashape/kong/issues/2211), and was implemented in
   [#2315](https://github.com/Mashape/kong/pull/2315).
+- Ability to hide Kong-specific response headers. Two new configuration fields:
+  `server_tokens` and `latency_tokens` will respectively toggle whether the
+  `Server` and `X-Kong-*-Latency` headers should be sent to downstream clients.
+  [#2259](https://github.com/Mashape/kong/pull/2259)
 - Serf commands executed by a running Kong node are now logged in the Nginx
   error logs with a `DEBUG` level.
   [#2410](https://github.com/Mashape/kong/pull/2410)
